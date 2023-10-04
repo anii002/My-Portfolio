@@ -20,7 +20,7 @@ function Projects() {
             <ProjectCard
               imgPath={moms}
               isBlog={false}
-              title="Mom's Kitchen"
+              title="Nosh-Box"
               description="In this project the user can create his account and manage his account. User can add the dish from different category of food to his cart"
               ghLink="https://github.com/anii002/Nosh-Box.git"
               demoLink="https://noshbox-api.onrender.com/"
