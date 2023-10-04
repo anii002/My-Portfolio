@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/../Assets/ANIKET's Resume.pdf";
+import pdf2 from "../../Assets/aniket-resume-2.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -18,7 +19,6 @@ function ResumeNew() {
   return (
     <div>
       <Container fluid className="resume-section">
-        <h6><span style={{ color: "red" }}>*</span> This is not Updated Resume</h6>
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
           <Button
@@ -35,6 +35,9 @@ function ResumeNew() {
 
         <Row className="resume">
           <Document file={pdf} className="d-flex justify-content-center">
+            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+          </Document>
+          <Document file={pdf2} className="d-flex justify-content-center">
             <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
           </Document>
         </Row>
